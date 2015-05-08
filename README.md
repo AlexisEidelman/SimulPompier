@@ -1,4 +1,4 @@
-# SimulPompier
+﻿# SimulPompier
 Le but de projet est de permettre de simuler les interventions des pompiers. 
 
 On peut décrire trois grands types d'objets: 
@@ -7,7 +7,7 @@ On peut décrire trois grands types d'objets:
 			Elles sont décrits par une nature, une position et un état. 
 	
 	2) Les évenements : Les incidents auxquels les pompiers doivent répondre
-			Ils sont caractérisés par une date, une suite d'intervention (durée de l'intervention)
+			Ils sont caractérisés par une date, une suite d'intervention (durée de l'intervention et lieu final),
 	
 	3) Les règles d'engagement : c'est la façon de répondre aux évenements en engageant un moyen disponible.
 	
