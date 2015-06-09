@@ -24,6 +24,7 @@ class Capacite(object):
 
     def __init__(self, typ, lieu=(0,0), etat='dipso',
                  retour_dispo=None):
+#        import pdb; pdb.set_trace()
         assert typ in capacites_possibles
         assert etat in etats_possibles
         if etat == 'dispo':
@@ -39,10 +40,10 @@ class Capacite(object):
     def devient_dispo(self):
         self.retour_dispo = None
         self.etat = 'dispo'
-    
+
     def devient_occupe(self, etat, date_fin):
         self.etat = etat
-        self.retour_dispo = date_fin        
+        self.retour_dispo = date_fin
 
 
 class Moyens(object):
@@ -96,7 +97,7 @@ class Moyens(object):
         '''
         assert etat in etats_possibles
         assert etat != 'dispo'
-        
+
         capacite = self.capacites['dispo'][idx]
         capacite.devient_occupe(etat, date_fin)
         self.capacites[etat].append(capacite)

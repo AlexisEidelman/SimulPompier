@@ -16,10 +16,12 @@ class Event(object):
     '''
 
     def __init__(self, date, typ, lieu=(0,0), suite =(None,None)):
-        assert typ in event_possibles
+#        assert typ in event_possibles
         assert isinstance(suite, tuple)
         assert len(suite) == 2
-        duree = timedelta(minutes=suite[0])
+        duree = suite[0]
+        if isinstance(duree, int):
+            duree = timedelta(minutes=suite[0])
         date_fin = date + duree
         # lieu_fin peut être l'hopital mais c'est peut être
         # inutile si on pense que la fin, c'est le retour à la caserne
